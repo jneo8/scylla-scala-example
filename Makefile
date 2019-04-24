@@ -10,7 +10,8 @@ build:  ## Run sbt assembly
 ##@ run
 
 run:  ## Run spark submit
-	spark-submit --master yarn --deploy-mode client --class example.SparkSessionExample target/scala-2.12/scylla-scala.jar
+	# spark-submit --master yarn --deploy-mode client --class example.SparkSessionExample target/scala-2.12/scylla-scala.jar
+	spark-submit --master yarn --deploy-mode client --class example.ScyllaSparkExample target/scala-2.11/scylla-scala.jar
 
 ##@ Help
 

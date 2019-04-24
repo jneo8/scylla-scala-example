@@ -1,16 +1,18 @@
 import Dependencies._
 
-ThisBuild / scalaVersion     := "2.12.8"
-ThisBuild / version          := "0.1.0-SNAPSHOT"
-ThisBuild / organization     := "com.example"
-ThisBuild / organizationName := "example"
+ThisBuild / scalaVersion              := "2.11.12"
+ThisBuild / version                   := "0.1.0-SNAPSHOT"
+ThisBuild / organization              := "com.example"
+ThisBuild / organizationName          := "example"
 
 lazy val root = (project in file("."))
   .settings(
     name := "scylla-scala",
     libraryDependencies += scalaTest % Test,
     libraryDependencies += sparkCore,
-    libraryDependencies += sparkSQL
+    libraryDependencies += sparkSQL,
+    libraryDependencies += sparkCatalyst,
+    libraryDependencies += sparkDatastax
   )
 
 
